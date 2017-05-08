@@ -1,0 +1,44 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>frei0r-plugins</Name>
+        <Homepage>http://www.piksel.org/frei0r</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A plugin API for video sources and filters</Summary>
+        <Description>frei0r-plugins is a minimalistic plugin API for video sources and filters. The behaviour of the effects can be controlled from the host by simple parameters. The intent is to solve the recurring reimplementation or adaptation issue of standard effects.</Description>
+        <Archive sha1sum="2a85352157e3cf786d4a838d7f0feffa1f831e1d" type="targz">https://files.dyne.org/frei0r/frei0r-plugins-1.6.0.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">explicitly-link-with-lm.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>frei0r-plugins</Name>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="2">
+            <Date>2017-04-21</Date>
+            <Version>1.6.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

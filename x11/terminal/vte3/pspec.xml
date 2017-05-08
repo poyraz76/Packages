@@ -1,0 +1,61 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vte3</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Summary>Xft powered terminal widget</Summary>
+        <Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
+        <Archive sha1sum="c712027659646572327344b8a8a1a93744c840fe" type="tarxz">mirrors://gnome/vte/0.49/vte-0.49.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+	    <Dependency>pcre2</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vte3</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+	    <Dependency>pcre2</Dependency>
+	    <Dependency>gnutls</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/vte</Path>
+            <Path fileType="data">/usr/share/pygtk</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="config">/etc/profile.d/vte.sh</Path>
+	    <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-05-05</Date>
+            <Version>0.49.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

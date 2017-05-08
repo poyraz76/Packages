@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libotr</Name>
+        <Homepage>http://www.cypherpunks.ca/otr/</Homepage>
+        <Packager>
+            <Name>lime Gnu/Linux Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Portable OTR (Off The Record) messaging library</Summary>
+        <Description>OTR messaging allows you to have private conversations over instant messaging.</Description>
+<Archive sha1sum="3894b82a6c307ad011681ad342d69b18344933ae" type="targz">https://otr.cypherpunks.ca/libotr-4.1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcrypt</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libotr</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libgpg-error</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="doc">/usr/share/doc/libotr/html</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-04-19</Date>
+            <Version>4.1.1</Version>
+            <Comment>Release Bump</Comment>
+            <Name>Lime Linux Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

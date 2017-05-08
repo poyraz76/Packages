@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>theme-damadamas</Name>
+        <Homepage>http://www.limelinux.com/</Homepage>
+        <Packager>
+            <Name>Lime Linux</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Damadamas Fatih Kaya'nın hazırlamış olduğu güzel bir tema</Summary>
+        <Description>Damadamas Fatih Kaya'nın hazırlamış olduğu güzel bir tema</Description>
+        <Archive sha1sum="16694e37858a5976225b8441b534b79ae147af19" type="targz">https://github.com/LimeLinux/DamaDamas/archive/v.1.0a.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>theme-damadamas</Name>
+        <Files>
+            <Path fileType="data">/usr/share/*</Path>
+        </Files> 
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2017-03-13</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime Linux</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

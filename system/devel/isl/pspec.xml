@@ -1,0 +1,47 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>isl</Name>
+        <Homepage>http://www.kotnet.org/~skimo/isl/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Integer Set Library</Summary>
+        <Description>isl is a library for manipulating sets and relations of integer points bounded by linear constraints.</Description>
+         <Archive sha1sum="13237a66fc623517fc570408b90a11e60eb6b4b9" type="tarxz">https://launchpad.net/ubuntu/+archive/primary/+files/isl_0.18.orig.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gmp</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>isl-0.07-gdb-autoload-dir.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>isl</Name>
+        <RuntimeDependencies>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share/gdb</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-04-21</Date>
+            <Version>0.18</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

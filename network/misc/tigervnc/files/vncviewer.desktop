@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=TigerVNC Viewer
+Comment=VNC client
+Exec=
+Icon=tigervnc
+Terminal=false
+StartupNotify=false
+Categories=Network;RemoteAccess;
+Name[C]=vncviewer

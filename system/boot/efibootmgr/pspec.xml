@@ -1,0 +1,46 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>efibootmgr</Name>
+        <Homepage>https://github.com/vathpela/efibootmgr</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app:console</IsA>
+        <Summary>Tool to modify UEFI Firmware Boot Manager Variables</Summary>
+        <Description>a Linux user-space application to modify the Intel Extensible Firmware Interface (EFI) Boot Manager.</Description>
+        <Archive sha1sum="5c7c60edfc7ff3589b711d1deaa10472f919ede9" type="targz">https://github.com/rhinstaller/efibootmgr/archive/15.tar.gz</Archive>
+        <BuildDependencies>
+           <Dependency>pciutils</Dependency>
+           <Dependency>zlib</Dependency>
+           <Dependency>efivar</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>efibootmgr</Name>
+        <RuntimeDependencies>
+            <Dependency>efivar</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-04-19</Date>
+            <Version>15</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

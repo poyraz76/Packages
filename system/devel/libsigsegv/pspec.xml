@@ -1,0 +1,37 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libsigsegv</Name>
+        <Homepage>http://libsigsegv.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A library for handling page faults in user mode</Summary>
+        <Description>This is a library for handling page faults in user mode. A page fault occurs when a program tries to access to a region of memory that is currently not available.</Description>
+        <Archive sha1sum="186dea8ae788395476bd7cbaf38c17ebe82e1777" type="targz">mirrors://gnu/libsigsegv/libsigsegv-2.11.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>libsigsegv</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-04-17</Date>
+            <Version>2.11</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

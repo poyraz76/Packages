@@ -1,0 +1,70 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mate-system-monitor</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/Linux</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>utilities-system-monitor</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Process and resource monitor</Summary>
+        <Description>Process viewer and system resource monitor for MATE</Description>
+        <Archive sha1sum="0fb62abebd2eaf01c1583cf5edfdbdc0eb776880" type="tarxz">http://pub.mate-desktop.org/releases/1.18/mate-system-monitor-1.18.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>atkmm</Dependency>
+            <Dependency>gtkmm</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>libwnck3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-system-monitor</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="lib">/usr/libexec/mate-system-monitor/</Path>
+        </Files>
+    </Package>
+
+    <History>
+	    <Update release="3">
+            <Date>2017-03-16</Date>
+            <Version>1.18.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ali Murat Algül</Name>
+            <Email>alimuratgulle@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

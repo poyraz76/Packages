@@ -1,0 +1,96 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>marco</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+             <Name>Lime GNU/Linux</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>GTK+ based window manager</Summary>
+        <Description>Marco is a small window manager, using GTK+ to do everything.</Description>
+        <Archive sha1sum="f92f2bc841d9d0cab3d4d9a9649a9ed7771a3759" type="tarxz">http://pub.mate-desktop.org/releases/1.18/marco-1.18.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>zenity</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>mate-common</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>marco</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/mate</Path>
+            <Path fileType="data">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/marco</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/mate-control-center</Path>
+            <Path fileType="data">/usr/share/applications/marco.desktop</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+	   <Update release="3">
+            <Date>2017-03-16</Date>
+            <Version>1.18.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ali Murat Algül</Name>
+            <Email>alimuratgulle@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

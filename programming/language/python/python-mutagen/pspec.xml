@@ -1,0 +1,35 @@
+<?xml version="1.0" ?> 
+<!DOCTYPE PISI SYSTEM "http://www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-mutagen</Name>
+        <Homepage>https://pypi.python.org/pypi/mutagen</Homepage>
+        <Packager>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@limelinux.com</Email>
+        </Packager>
+        <Summary>Python style guide checker</Summary>
+        <Description>Mutagen is a Python module to handle audio metadata. It supports ASF, FLAC, MP4, Monkey’s Audio, MP3, Musepack, Ogg Opus, Ogg FLAC, Ogg Speex, Ogg Theora, Ogg Vorbis, True Audio, WavPack, OptimFROG, and AIFF audio files. All versions of ID3v2 are supported, and all standard ID3v2.4 frames are parsed. It can read Xing headers to accurately calculate the bitrate and length of MP3s. ID3 and APEv2 tags can be edited regardless of audio format. It can also manipulate Ogg streams on an individual packet/page level.</Description>
+        <License>GPLv2+</License>
+        <Archive sha1sum="973e29c3b27f2b99ac5b18899ef07c2c8c9b035e" type="targz">https://pypi.python.org/packages/14/d5/51f49f345d4490a9a6a04677ab136f78e4e0c64ed142e48b4ed818c13c96/mutagen-1.37.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-mutagen</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python*</Path>
+            <Path fileType="doc">/usr/share/*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-03-14</Date>
+            <Version>1.37</Version>
+            <Comment>Add python-mutagen to repositories</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@limelinux.com</Email>
+        </Update>
+    </History>	
+</PISI>

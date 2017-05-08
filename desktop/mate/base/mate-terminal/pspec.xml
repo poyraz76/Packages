@@ -1,0 +1,64 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mate-terminal</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/Linux</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>utilities-terminal</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>MATE terminal emulator application</Summary>
+        <Description>mate-terminal, masaüstü için terminal uygulaması.</Description>
+        <Archive sha1sum="206403298a32ccfc35b0d771246aab02d910aa49" type="tarxz">http://pub.mate-desktop.org/releases/1.18/mate-terminal-1.18.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>dconf</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>mate-common</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>vte3</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-terminal</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>dconf</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>vte3</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/mate-terminal</Path>
+        </Files>
+    </Package>
+
+    <History>
+	    <Update release="3">
+            <Date>2017-03-16</Date>
+            <Version>1.18.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ali Murat Algül</Name>
+            <Email>alimuratgulle@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

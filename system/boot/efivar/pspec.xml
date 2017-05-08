@@ -1,0 +1,49 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>efivar</Name>
+        <Homepage>https://github.com/vathpela/efivar</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPL2.1</License>
+        <IsA>app:console</IsA>
+        <Summary>Tools and library to manipulate EFI variables</Summary>
+        <Description>Tools and library to manipulate EFI variables.</Description>
+        <Archive sha1sum="2fc8e62b4eaaff47b98b803998576a84873c719a" type="targz">https://github.com/rhinstaller/efivar/archive/31.tar.gz</Archive>
+        <BuildDependencies>
+           <Dependency>popt</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">efivar-no-static.patch</Patch-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>efivar</Name>
+        <RuntimeDependencies>
+            <Dependency>popt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+        <Update release="2">
+            <Date>2017-04-17</Date>
+            <Version>0.31</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

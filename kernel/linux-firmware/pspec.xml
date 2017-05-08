@@ -1,0 +1,45 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>linux-firmware</Name>
+        <Homepage>http://git.kernel.org/cgit/linux/kernel/git/firmware/linux-firmware.git/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>ipw2100-fw</License>
+        <License>ipw2200-fw</License>
+        <License>freedist</License>
+        <License>GPLv2+</License>
+        <License>GPLv2</License>
+        <License>MIT</License>
+        <IsA>data</IsA>
+        <Summary>Firmware files used by the Linux kernel</Summary>
+        <Description>linux-firmware contains different firmware files required for some devices to operate correctly.</Description>
+        <Archive sha1sum="6e0fbac0093c96c90b5fb802dfb527fa51484155" type="binary">https://sourceforge.net/projects/limeteam/files/source-limelinux/limelinux.git</Archive>
+        <Archive sha1sum="537b453a2b22466412651640177e422cc21fa965" type="binary">https://sourceforge.net/projects/limeteam/files/source-limelinux/Firmware-nonfree/linux-firmware-limelinux.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>linux-firmware</Name>
+        <Files>
+            <Path fileType="data">/lib/firmware</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-04-20</Date>
+            <Version>20170420</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

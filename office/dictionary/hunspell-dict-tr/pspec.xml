@@ -1,0 +1,43 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>hunspell-dict-tr</Name>
+        <Homepage>http://extensions.libreoffice.org/extension-center/turkish-spellcheck-dictionary/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2+</License>
+        <License>BSD</License>
+        <IsA>locale:en</IsA>
+        <IsA>data</IsA>
+        <Summary>Turkish hunspell dictionaries</Summary>
+        <Description>Turkish hunspell dictionaries</Description>
+        <Archive sha1sum="60178cfdf8be2fb46894450ab7e0110f401e2573" type="zip">https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/tr-spell/Hunspell_tr_TR_v.0.1.zip</Archive>
+        <BuildDependencies>
+            <Dependency>hunspell</Dependency>
+            <!--<Dependency>aspell-tr</Dependency>-->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>hunspell-dict-tr</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/libreoffice/share/extensions/hunspell_tr/</Path>
+            <Path fileType="data">/usr/share/hunspell</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-09</Date>
+            <Version>1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

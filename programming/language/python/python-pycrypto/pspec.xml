@@ -1,0 +1,42 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-pycrypto</Name>
+        <Homepage>https://www.dlitz.net/software/pycrypto</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>PYTHON</License>
+        <IsA>library</IsA>
+        <Summary>Python Cryptography Toolkit</Summary>
+        <Description>Python Cryptography Toolkit is a collection of cryptographic algorithms and protocols, implemented for use from Python.</Description>
+        <Archive sha1sum="aeda3ed41caf1766409d4efc689b9ca30ad6aeb2" type="targz">https://pypi.python.org/packages/60/db/645aa9af249f059cc3a368b118de33889219e0362141e75d4eaf6f80f163/pycrypto-2.6.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gmp</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pycrypto</Name>
+        <RuntimeDependencies>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2016-12-21</Date>
+            <Version>2.6.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

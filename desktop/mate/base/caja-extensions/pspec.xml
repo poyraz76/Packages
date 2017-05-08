@@ -1,0 +1,64 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>caja-extensions</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/Linux</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Mate file manager eklentileri</Summary>
+        <Description>caja-extensions, Mate file manager eklentileri.</Description>
+        <Archive sha1sum="ec5f8d504479f4069bd899fb5c91b230bfe4703c" type="tarxz">http://pub.mate-desktop.org/releases/1.18/caja-extensions-1.18.0.tar.xz</Archive>
+        <BuildDependencies>
+             <Dependency>caja</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>gupnp</Dependency>
+            <Dependency>gksu</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>caja-extensions</Name>
+        <RuntimeDependencies>
+             <Dependency>caja</Dependency> 
+            <Dependency>gtk3</Dependency>
+            <Dependency>gupnp</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-desktop</Dependency>
+            <Dependency>gksu</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin/</Path>
+            <Path fileType="data">/usr/share/MateConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0/</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	    <Update release="3">
+            <Date>2017-03-15</Date>
+            <Version>1.18.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ali Murat Algül</Name>
+            <Email>alimuratgulle@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

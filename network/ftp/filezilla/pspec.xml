@@ -1,0 +1,69 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>filezilla</Name>
+        <Homepage>http://filezilla-project.org/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>filezilla</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Simple FTP Client</Summary>
+        <Description>Easy-to-use FTP Client which also supports SFTP.</Description>
+        <Archive sha1sum="955eb2da0bdf7875ad7ce1192c589a3b10fc4f10" type="tarbz2">https://sourceforge.net/projects/filezilla/files/FileZilla_Client/3.24.0/FileZilla_3.24.0_src.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>libidn</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>libfilezilla</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="0">i18n-filezilla.desktop.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>filezilla</Name>
+        <RuntimeDependencies>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>xdg-utils</Dependency>
+            <Dependency>pugixml</Dependency>
+            <Dependency>libfilezilla</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/filezilla</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+	    <Path fileType="data">/usr/share/appdata/</Path>
+	    
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-06-09</Date>
+            <Version>3.24.0</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

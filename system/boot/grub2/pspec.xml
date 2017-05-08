@@ -1,0 +1,84 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>grub2</Name>
+        <Homepage>http://www.gnu.org/software/grub/</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>GNU GRUB is a Multiboot boot loader.</Summary>
+        <Description>GNU GRUB (short for GNU GRand Unified Bootloader) is a boot loader package from the GNU Project.</Description>
+        <Archive sha1sum="3d7eb6eaab28b88cb969ba9ab24af959f4d1b178" type="tarxz">ftp://ftp.gnu.org/gnu/grub/grub-2.02.tar.xz</Archive>
+        <Archive sha1sum="ab7de42011c1156d46d0b96c3753f323042f2daf" type="tarxz">https://sourceforge.net/projects/limeteam/files/source-limelinux/grub2-theme-limelinux-0.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>binutils</Dependency>
+            <Dependency>bison</Dependency>
+            <Dependency>flex</Dependency>
+            <Dependency>gcc</Dependency>
+            <Dependency>help2man</Dependency>
+            <Dependency>texinfo</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>fuse</Dependency>
+            <Dependency>lvm2</Dependency>
+            <Dependency>gettext</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>LimeLinux-grub-tab.patch</Patch>
+            <Patch level="1">limelinux_name_and_initramfs.patch</Patch>
+            <Patch level="1">mkconfig-fix.patch</Patch>
+            <Patch level="1">limelinux-10_linux.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>grub2</Name>
+        <RuntimeDependencies>
+            <Dependency>freetype</Dependency>
+            <Dependency>xz</Dependency>
+            <Dependency>fuse</Dependency>
+            <Dependency>lvm2</Dependency>
+            <Dependency>mtools</Dependency>
+            <Dependency>os-prober</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib/grub/i386-pc/</Path>
+            <Path fileType="library">/usr/lib/grub/x86_64-efi</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/grub</Path>
+            <Path fileType="data">/usr/share/info</Path>
+            <Path fileType="data">/boot/grub2</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="man">/usr/share/man/man8</Path>
+            <Path fileType="config">/etc/bash_completion.d</Path>
+            <Path fileType="config">/etc/grub.d</Path>
+            <Path fileType="config">/etc/default</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/boot/grub2/fonts/unicode.pf2">unicode.pf2</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/grub/limelinux-grub-bg.png">limelinux-grub-bg.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/etc/default/grub">grub-defaults</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/update-grub">update-grub</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="5">
+            <Date>2017-04-27</Date>
+            <Version>2.02</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

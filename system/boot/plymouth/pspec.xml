@@ -1,0 +1,117 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>plymouth</Name>
+        <Homepage>http://cgit.freedesktop.org/plymouth</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Graphical Boot Animation and Logger</Summary>
+        <Description>plymouth provides an attractive graphical boot animation in place of the text messages that normally get shown. Text messages are instead redirected to a log file for viewing after boot.</Description>
+        <Archive sha1sum="d0b70929bc47899e03019c3fcd681dd043d7fb8c" type="targz">http://source.pisilinux.org/1.0/plymouth-0.8.8.tar.gz</Archive>
+        <Archive sha1sum="6ec6375f68bdecbef3b3d2fd9830e5b4453cc8ff" type="tarxz" target="plymouth-0.8.8/themes">https://sourceforge.net/projects/limeteam/files/source-limelinux/limelinux_plymounth_theme-0.2.tar.xz</Archive>
+        <AdditionalFiles>
+            <AdditionalFile permission="0755" target="generate-flist">limelinux/generate-flist.py</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>kernel-module-headers</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>graphite2</Dependency>
+            <Dependency>harfbuzz</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gtk2</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!-- Lime Linux patches-->
+            <Patch level="1">0008-show-delay.patch</Patch>
+            <Patch level="1">limelinux/plymouth-update-initrd.patch</Patch>
+            <Patch level="1">limelinux/disable-source-code-tracing.patch</Patch>
+            <Patch level="1">limelinux/adapt-theme-script.patch</Patch>
+            <Patch level="1">limelinux/add-limelinux-theme.patch</Patch>
+            <!--MaGeia patches-->
+            <Patch level="1">mageia/plymouth-restore-suspend.patch</Patch>
+            <Patch level="1">fedora/fix-crash.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>plymouth</Name>
+        <RuntimeDependencies>
+            <Dependency>libdrm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/bin</Path>
+            <Path fileType="executable">/sbin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/bin/plymouth</Path>
+            <Path fileType="executable">/usr/libexec/plymouth</Path>
+            <Path fileType="config">/etc/plymouth</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="library">/usr/lib/plymouth/text.so</Path>
+            <Path fileType="library">/usr/lib/plymouth/details.so</Path>
+            <Path fileType="library">/usr/lib/plymouth/renderers</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/plymouth</Path>
+            <Path fileType="data">/usr/share/plymouth/themes</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/details</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/text</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/var/lib/plymouth</Path>
+            <Path fileType="data">/run/plymouth</Path>
+            <Path fileType="data">/var/spool/plymouth</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="config">/usr/lib/tmpfiles.d/plymouth.conf</Path>
+            <Path fileType="library">/usr/lib/libply-splash-graphics.so*</Path>
+            <Path fileType="library">/usr/lib/plymouth/renderers/x11*</Path>
+            <Path fileType="executable">/usr/bin/plymouth-log-viewer</Path>
+            <Path fileType="data">/usr/share/gdm/autostart/LoginWindow/plymouth-log-viewer.desktop</Path>
+            <Path fileType="library">/usr/lib/plymouth/fade-throbber.so</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/spinner</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/fade-in</Path>
+            <Path fileType="library">/usr/lib/plymouth/throbgress.so</Path>
+            <Path fileType="library">/usr/lib/plymouth/space-flares.so</Path>
+            <Path fileType="library">/usr/lib/plymouth/two-step.so</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/script</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/limelinux</Path>
+            <Path fileType="library">/usr/lib/plymouth/script.so</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/charge</Path>
+            <Path fileType="data">/usr/share/plymouth/themes/solar</Path>
+            <Path fileType="library">/usr/lib/plymouth/label.so</Path>
+            <Path fileType="library">/lib/libply-splash-core.so*</Path>
+            <Path fileType="library">/lib/libply.so*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/plymouth.conf">tmpfiles.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/var/lib/plymouth/boot-duration">limelinux/boot-duration</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/lib/initramfs/plymouth.list">limelinux/initramfs.files</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/plymouth-limelinux.png">limelinux/images/white-head.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/plymouth/themes/charge/charge.plymouth">fedora/charge.plymouth</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2017-02-25</Date>
+            <Version>0.8.8</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>
+

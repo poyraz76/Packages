@@ -1,0 +1,59 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-sphinx</Name>
+        <Homepage>http://sphinx.pocoo.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Python documentation generator. It can generate HTML or Latex outputs</Summary>
+        <Description>It's a very common documentation generator especially using for python based documentation.It can generate HTML or PDF, Ps outputs with Latex output support.</Description>
+        <Archive sha1sum="e296be1f697ba5eda7941570d718544df8182648" type="targz">https://pypi.python.org/packages/a7/df/4487783152b14f2b7cd0b0c9afb119b262c584bf972b90ab544b61b74c62/Sphinx-1.5.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>docutils</Dependency>
+            <Dependency>python-Pygments</Dependency>
+            <Dependency>python-Jinja2</Dependency>
+            <Dependency>python-MarkupSafe</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">remove_docutils.patch</Patch-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>python-sphinx</Name>
+        <RuntimeDependencies>
+            <Dependency>docutils</Dependency>
+            <Dependency>python-Pygments</Dependency>
+            <Dependency>python-Jinja2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python*</Path>
+            <Path fileType="doc">/usr/share/doc/python-sphinx/LICENSE</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python-sphinx-docs</Name>
+        <Summary>Documentation files for python-sphinx</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/python-sphinx</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2017-03-11</Date>
+            <Version>1.5.3</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

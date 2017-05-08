@@ -1,0 +1,74 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mate-utils</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/Linux</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>system-search</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>MATE utility programs</Summary>
+        <Description>The mate-utils package contains a set of small "desk accessory" utility applications for MATE, such as a dictionary, a disk usage analyzer, a screenshot tool and others.</Description>
+        <Archive sha1sum="f20e06a5950452af41ce18e6aa5041f68ef90e4e" type="targz">https://github.com/mate-desktop/mate-utils/archive/v1.18.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-panel</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>yelp-tools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-utils</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>mate-panel</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/include</Path>
+        </Files>
+    </Package>
+
+
+    <History>
+	   <Update release="4">
+            <Date>2017-03-16</Date>
+            <Version>1.18.1</Version>
+            <Comment>version bump</Comment>
+            <Name>Ali Murat Algül</Name>
+            <Email>alimuratgulle@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

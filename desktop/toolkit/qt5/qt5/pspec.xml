@@ -1,0 +1,166 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>qt5</Name>
+        <Homepage>http://qt.nokia.com</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Qt toolkit version 4</Summary>
+        <Description>Qt is a cross platform GUI toolkit.</Description>
+        <Archive sha1sum="1a056ca4f731798e4142a691d0448c2c853228ca" type="tarxz">http://download.qt.io/archive/qt/5.8/5.8.0/single/qt-everywhere-opensource-src-5.8.0.tar.xz</Archive>
+        <BuildDependencies>
+           <Dependency>atk</Dependency>                  
+           <Dependency>cups</Dependency>                 
+           <Dependency>dbus</Dependency>                 
+           <Dependency>gtk3</Dependency>                 
+           <Dependency>sdl2</Dependency>                 
+           <Dependency>webp</Dependency>                 
+           <Dependency>zlib</Dependency>                 
+           <Dependency>cairo</Dependency>                
+           <Dependency>glib2</Dependency>               
+           <Dependency>icu4c</Dependency>                
+           <Dependency>libXi</Dependency>                
+           <Dependency>pango</Dependency>                
+           <Dependency>jasper</Dependency>               
+           <Dependency>libX11</Dependency>               
+           <Dependency>libdrm</Dependency>               
+           <Dependency>libgcc</Dependency>               
+           <Dependency>libpng</Dependency>               
+           <Dependency>libxcb</Dependency>               
+           <Dependency>openal</Dependency>               
+           <Dependency>sqlite</Dependency>               
+           <Dependency>libpcre</Dependency>              
+           <Dependency>mariadb</Dependency>              
+           <Dependency>openssl</Dependency>              
+           <Dependency>wayland</Dependency>              
+           <Dependency>freetype</Dependency>             
+           <Dependency>harfbuzz</Dependency>             
+           <Dependency>hunspell</Dependency>             
+           <Dependency>libinput</Dependency>             
+           <Dependency>libmtdev</Dependency>             
+           <Dependency>unixODBC</Dependency>             
+           <Dependency>bluez-libs</Dependency>           
+           <Dependency>gdk-pixbuf</Dependency>           
+           <Dependency>postgresql</Dependency>           
+           <Dependency>pulseaudio</Dependency>           
+           <Dependency>xcb-util-wm</Dependency>          
+           <Dependency>libxkbcommon</Dependency>         
+           <Dependency>libXcomposite</Dependency>        
+           <Dependency>gstreamer-next</Dependency>       
+           <Dependency>xcb-util-image</Dependency>       
+           <Dependency>xcb-util-keysyms</Dependency>     
+           <Dependency>speech-dispatcher</Dependency>    
+           <Dependency>xcb-util-renderutil</Dependency>  
+           <Dependency>gst-plugins-bad-next</Dependency> 
+           <Dependency>gst-plugins-base-next</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch>no-gtk-qpa-on-wayland.patch</Patch-->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>qt5</Name>
+        <RuntimeDependencies>
+             <Dependency>mesa</Dependency>
+             <Dependency>tiff</Dependency>
+             <Dependency>libICE</Dependency>
+             <Dependency>libSM</Dependency>
+             <Dependency>libmng</Dependency>
+             <Dependency>libXext</Dependency>
+             <Dependency>alsa-lib</Dependency>
+             <Dependency>gstreamer</Dependency>
+             <Dependency>fontconfig</Dependency>
+             <Dependency>libXrender</Dependency>
+             <Dependency>libjpeg-turbo</Dependency>
+             <Dependency>atk</Dependency>                  
+             <Dependency>cups</Dependency>                 
+             <Dependency>dbus</Dependency>                 
+             <Dependency>gtk3</Dependency>                 
+             <Dependency>sdl2</Dependency>                 
+             <Dependency>webp</Dependency>                 
+             <Dependency>zlib</Dependency>                 
+             <Dependency>cairo</Dependency>                
+             <Dependency>glib2</Dependency>               
+             <Dependency>icu4c</Dependency>                
+             <Dependency>libXi</Dependency>                
+             <Dependency>pango</Dependency>                
+             <Dependency>jasper</Dependency>               
+             <Dependency>libX11</Dependency>               
+             <Dependency>libdrm</Dependency>               
+             <Dependency>libgcc</Dependency>               
+             <Dependency>libpng</Dependency>               
+             <Dependency>libxcb</Dependency>               
+             <Dependency>openal</Dependency>               
+             <Dependency>sqlite</Dependency>               
+             <Dependency>libpcre</Dependency>              
+             <Dependency>mariadb</Dependency>              
+             <Dependency>openssl</Dependency>              
+             <Dependency>wayland</Dependency>              
+             <Dependency>freetype</Dependency>             
+             <Dependency>harfbuzz</Dependency>             
+             <Dependency>hunspell</Dependency>             
+             <Dependency>libinput</Dependency>             
+             <Dependency>libmtdev</Dependency>             
+             <Dependency>unixODBC</Dependency>             
+             <Dependency>bluez-libs</Dependency>           
+             <Dependency>gdk-pixbuf</Dependency>           
+             <Dependency>postgresql</Dependency>           
+             <Dependency>pulseaudio</Dependency>           
+             <Dependency>xcb-util-wm</Dependency>          
+             <Dependency>libxkbcommon</Dependency>         
+             <Dependency>libXcomposite</Dependency>        
+             <Dependency>gstreamer-next</Dependency>       
+             <Dependency>xcb-util-image</Dependency>       
+             <Dependency>xcb-util-keysyms</Dependency>     
+             <Dependency>speech-dispatcher</Dependency>    
+             <Dependency>xcb-util-renderutil</Dependency>  
+             <Dependency>gst-plugins-bad-next</Dependency> 
+             <Dependency>gst-plugins-base-next</Dependency>              
+
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr</Path>
+            <Path fileType="data">/usr/lib/*</Path>
+            <Path fileType="localedata">/usr/share/*</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/qt5/translations/assistant_tr.qm">assistant_tr.qm</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/assistant5.desktop">assistant.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/assistant5.png">assistant.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/designer5.desktop">designer.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/qt5/translations/designer_tr.qm">designer_tr.qm</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/designer5.png">designer.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/linguist5.desktop">linguist.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/linguist5.png">linguist.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/qt5/translations/linguist_tr.qm">linguist_tr.qm</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/qdbusviewer5.desktop">qdbusviewer.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/qdbusviewer5.png">assistant.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+
+
+
+    <History>
+        <Update release="4">
+            <Date>2017-03-14</Date>
+            <Version>5.8.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,49 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libtalloc</Name>
+        <Homepage>http://talloc.samba.org</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>LGPLv3+</License>
+        <IsA>library</IsA>
+        <Summary>Hierarchical pool based memory allocator</Summary>
+        <Description>libtalloc is a library which implements a hierarchical allocator with destructors which is the core memory allocator in samba.</Description>
+        <Archive sha1sum="c91fded4fad84a42dd91c9feb0951ea43a29893e" type="targz">https://www.samba.org/ftp/talloc/talloc-2.1.8.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>libxslt</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libtalloc</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+           <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-01-21</Date>
+            <Version>2.1.8</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2017-01-21</Date>
+            <Version>2.1.8</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

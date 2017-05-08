@@ -1,0 +1,53 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gfxboot</Name>
+        <Homepage>https://github.com/openSUSE/gfxboot</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>gfxboot</Icon>
+        <IsA>app:console</IsA>
+        <Summary>Tools to create graphical boot logos</Summary>
+        <Description>Set of tools to create graphical boot logos, for grub, lilo and syslinux. It supports arch-specific boot menus, advanced help menus, multiple keymaps, animated images, and more graphical pretty things.</Description>
+        <Archive sha1sum="4e8adefbc51d35fd6f9f4bd5abcacd6f26b3a703" type="targz">https://github.com/openSUSE/gfxboot/archive/4.5.20.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>xmlto</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>util-linux</Dependency>
+            <Dependency>libxslt</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="0">productname.patch</Patch>
+            <Patch>no-theme-no-git.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gfxboot</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-HTML-Parser</Dependency>
+            <Dependency>freetype</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/share/gfxboot/bin</Path>
+            <Path fileType="data">/usr/share/gfxboot</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-04-17</Date>
+            <Version>4.5.20</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

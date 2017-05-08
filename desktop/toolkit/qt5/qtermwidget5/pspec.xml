@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>qtermwidget5</Name>
+        <Homepage>https://github.com/qterminal/qtermwidget</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:gui</IsA>
+        <Summary>Terminal widget for Qt5</Summary>
+        <Description>A simple terminal widget for using with Qt5 based applications</Description>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="96ad7f2250aaac0ca84a10e47c3e0644d1d84a72" type="targz">https://github.com/lxde/qtermwidget/archive/0.7.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>qtermwidget5</Name>
+        <Summary>Development files for qtermwidget5</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/consoleq</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-03-14</Date>
+            <Version>0.7.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

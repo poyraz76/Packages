@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>module-nvidia304</Name>
+        <Homepage>http://www.nvidia.com</Homepage>
+        <Packager>
+            <Name>LimeLinux Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>NVIDIA</License>
+        <IsA>driver</IsA>
+        <Summary>NVIDIA drivers for GeForce 5-7 series GPUs</Summary>
+        <Description>NVIDIA graphics drivers provide optimized 2D/3D performance.</Description>
+        <Archive sha1sum="83d07f0de1363510f2b1c3f647878a0141934dfa" type="binary">http://http.download.nvidia.com/XFree86/Linux-x86_64/304.135/NVIDIA-Linux-x86_64-304.135.run</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="nv-drm.patch">nv-drm.patch</AdditionalFile>
+            <AdditionalFile target="linux49.patch">linux49.patch</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency version="4.9.18">kernel-module-headers</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>module-nvidia304</Name>
+        <Summary>Kernel module for NVIDIA driver 304.xx releases</Summary>
+        <RuntimeDependencies>
+            <Dependency version="4.9.18">kernel</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>xorg-server</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library" permanent="true">/lib/modules</Path>
+            <Path fileType="data">/etc/OpenCL</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+        <BuildFlags>
+            <Flag>noDelta</Flag>
+        </BuildFlags>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-04-06</Date>
+            <Version>304.135</Version>
+            <Comment>First release</Comment>
+            <Name>Ergün Salman</Name>
+            <Email>poyraz76@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>

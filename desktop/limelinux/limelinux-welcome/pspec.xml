@@ -1,0 +1,51 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "www.limelinux.com/standard/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>limelinux-welcome</Name>
+        <Homepage>http://limelinux.com</Homepage>
+        <Packager>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>limelinux-welcome</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Lime Linux Welcome Application</Summary>
+        <Description>Lime Linux Welcome Application</Description>
+        <Archive sha1sum="0448fa0e3d90b719ae81b1ff1cb90125ed5e14dc" type="targz">https://github.com/LimeLinux/limelinux-welcome/archive/1.0-rc.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-qt5</Dependency>
+            <Dependency>qt5</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>limelinux-welcome</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-qt5</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/welcome</Path>
+            <Path fileType="data">/usr/lib/python3.6/site-packages</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localdata">/usr/share/limelinux-welcome/languages</Path>
+            <Path fileType="config">/etc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2017-04-26</Date>
+            <Version>1.0r</Version>
+            <Comment>First release</Comment>
+            <Name>Lime GNU/LINUX Community</Name>
+            <Email>admin@limelinux.com</Email>
+        </Update>
+    </History>
+</PISI>
